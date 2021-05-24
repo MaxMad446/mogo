@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" 
         rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>    
         <script src="https://kit.fontawesome.com/fae8cc7d60.js" crossorigin="anonymous"></script>    
     <title>Mogo</title>
   </head>
@@ -17,17 +18,17 @@
 
     <!-- Header --> 
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
-          <div class="header__logo">MoGo</div>
+          <div class="header__logo" data-scroll="#intro">MoGo</div>
 
-          <nav class="nav">
-            <a class="nav__link active" href="#">About</a>
-              <a class="nav__link" href="#">Service</a>
-              <a class="nav__link" href="#">Blog</a>
-              <a class="nav__link" href="#">Work</a>
-              <a class="nav__link" href="#">Contact</a>
+          <nav class="nav" id="nav">
+            <a class="nav__link" href="#" data-scroll="#about">About</a>
+              <a class="nav__link" href="#" data-scroll="#service">Service</a>
+              <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+              <a class="nav__link" href="#" data-scroll="#work">Work</a>
+              <a class="nav__link" href="#" data-scroll="#contact">Contact</a>
               <a class="nav__link" href="#">
               <i class="fas fa-shopping-cart"></i>
             </a>
@@ -36,8 +37,8 @@
             </a>
           </nav>
 
-          <button class="nav-toogle" type="button">
-            <span class="nav-toogle__item">Menu</span>
+          <button class="nav-toggle" id="nav_toggle" type="button">
+            <span class="nav-toggle__item">Menu</span>
           </button>
 
         </div>
@@ -49,7 +50,7 @@
     <div class="page">
     <!-- Intro -->
 
-    <div class="intro">
+    <div class="intro" id="intro">
       <div class="container">
         <div class="intro__inner">
           
@@ -95,7 +96,7 @@
 
     <!-- Section About-->
 
-    <section class="section">
+    <section class="section" id="about">
       <div class="container">
 
         <div class="section__header">
@@ -188,7 +189,7 @@
 
 
 
-    <section class="section">
+    <section class="section" id="service">
       <div class="container">
         <div class="section__header">
           <h3 class="section__suptitle">We work with</h3>
@@ -304,35 +305,35 @@
         </div>
         <div class="wedo__item">
           <div class="accordion">
-            <div class="accordion__item">
+            <div class="accordion__item" data-collapse="#wedo_1">
               <div class="accordion__header">
                 <img class="accordion__icon" src="./asserts/img/services/photography.png" alt="">
                 <div class="accordion__title">photography</div>
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content" id="wedo_1">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus earum labore quibusdam quis laborum eius impedit repudiandae quia, provident totam quo blanditiis vel pariatur explicabo tempore animi necessitatibus ipsa nesciunt.
                 A, nobis quis. Corporis commodi similique numquam tempore at ad, facere rem repellendus vero. Incidunt vitae dicta ipsa non ad magni rem dignissimos, pariatur ducimus fuga, maxime mollitia aliquid sit!</p>
               </div>
             </div>
 
 
-            <div class="accordion__item active">
-              <div class="accordion__header">
+            <div class="accordion__item active" data-collapse="#wedo_2">
+              <div class="accordion__header" >
                 <img class="accordion__icon" src="./asserts/img/services/creativity.png" alt="">
                 <div class="accordion__title">creativity</div>
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content" id="wedo_2">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus earum labore quibusdam quis laborum eius impedit repudiandae quia, provident totam quo blanditiis vel pariatur explicabo tempore animi necessitatibus ipsa nesciunt.
                 A, nobis quis. Corporis commodi similique numquam tempore at ad, facere rem repellendus vero. Incidunt vitae dicta ipsa non ad magni rem dignissimos, pariatur ducimus fuga, maxime mollitia aliquid sit!</p>
               </div>
             </div>
 
-            <div class="accordion__item">
-              <div class="accordion__header">
+            <div class="accordion__item" data-collapse="#wedo_3">
+              <div class="accordion__header" >
                 <img class="accordion__icon" src="./asserts/img/services/webdesign.png" alt="">
                 <div class="accordion__title">Web design</div>
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content" id="wedo_3">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus earum labore quibusdam quis laborum eius impedit repudiandae quia, provident totam quo blanditiis vel pariatur explicabo tempore animi necessitatibus ipsa nesciunt.
                 A, nobis quis. Corporis commodi similique numquam tempore at ad, facere rem repellendus vero. Incidunt vitae dicta ipsa non ad magni rem dignissimos, pariatur ducimus fuga, maxime mollitia aliquid sit!</p>
               </div>
@@ -357,18 +358,31 @@
         <div class="reviews">
           
 
-            <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-            <a class="reviews__btn reviews__btn--next" href="#">Next</a>
+            <div data-slider>
+              <div>
+                <div class="reviews__item">
+                  <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
+                  <div class="reviews__text">
+                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quidem, quisquam facere. Adipisci amet deserunt rem.
+                    Quidem, quisquam facere. Adipisci amet deserunt rem."
+                  </div>
+                  <div class="reviews__author">Jon Doe</div>
+                </div>
+              </div>
 
-          <div class="reviews__item">
-            <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
-            <div class="reviews__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Quidem, quisquam facere. Adipisci amet deserunt rem.
-               Quidem, quisquam facere. Adipisci amet deserunt rem."
+              <div>
+                <div class="reviews__item">
+                  <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
+                  <div class="reviews__text">
+                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quidem, quisquam facere. Adipisci amet deserunt rem.
+                    Quidem, quisquam facere. Adipisci amet deserunt rem."
+                  </div>
+                  <div class="reviews__author">Jon Doe</div>
+                </div>
+              </div>
             </div>
-            <div class="reviews__author">Jon Doe</div>
-          </div>
         </div>
 
       </div>
@@ -377,7 +391,7 @@
 
     <!-- Who we are -->
 
-    <section class="section">
+    <section class="section" id="work">
 
       <div class="container">
         <div class="section__header">
@@ -610,7 +624,7 @@
     </section>
 
 
-    <!-- New Block -->
+    <!-- Reviews 2 -->
 
 
     <div class="section">
@@ -618,18 +632,30 @@
 
         <div class="reviews">
           
-
-            <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-            <a class="reviews__btn reviews__btn--next" href="#">Next</a>
-
-          <div class="reviews__item">
-            <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
-            <div class="reviews__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Quidem, quisquam facere. Adipisci amet deserunt rem.
-               Quidem, quisquam facere. Adipisci amet deserunt rem."
+          <div data-slider>
+            <div>
+              <div class="reviews__item">
+                <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
+                <div class="reviews__text">
+                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem, quisquam facere. Adipisci amet deserunt rem.
+                  Quidem, quisquam facere. Adipisci amet deserunt rem."
+                </div>
+                <div class="reviews__author">Richard McClintock</div>
+              </div>
             </div>
-            <div class="reviews__author">Richard McClintock</div>
+            
+            <div>
+              <div class="reviews__item">
+                <img class="reviews__photo" src="./asserts/img/avatar.png" alt="">
+                <div class="reviews__text">
+                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem, quisquam facere. Adipisci amet deserunt rem.
+                  Quidem, quisquam facere. Adipisci amet deserunt rem."
+                </div>
+                <div class="reviews__author">Richard McClintock</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -704,7 +730,7 @@
     <!-- Our stories / Latest Blog -->
 
 
-    <section class="section">
+    <section class="section" id="blog">
       <div class="container">
         
         <div class="section__header">
@@ -850,7 +876,7 @@
     <!-- / Open Map -->
 
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container">
 
         <div class="footer__inner">
@@ -1009,5 +1035,8 @@
 
   </div> <!-- / .page-->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./asserts/js/app.js"></script>
   </body>
 </html>
